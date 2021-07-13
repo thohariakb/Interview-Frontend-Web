@@ -5,9 +5,6 @@ const CardQuestion2 = (props) => {
 
   return (
     <div>
-      <h1 className="ml-auto lg:w-3/4 font-bold text-2xl text-gray-400 mb-3 mt-4">
-        Question 1
-      </h1>
 
       <div className="ml-auto p-4 lg:w-3/4 bg-white dark:bg-gray-800 shadow-lg rounded">
         <div className="grid grid-cols-4 gap-6 flex text-center items-center py-6 border-b border-gray-300 dark:border-gray-200">

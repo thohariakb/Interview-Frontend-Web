@@ -1,12 +1,24 @@
-import Head from 'next/head'
-import Sidebard from '../components/Sidebar';
-import CardQuestion1 from '../components/CardQuestion1';
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
-export default function Home() {
+import Link from 'next/link'
+
+import { getProducts } from '../redux/actions/productsAction';
+import Question1 from './Question1';
+
+export default function Index() {
+
+  // const dispatch = useDispatch()
+  
+  // useEffect(() => {
+  //   dispatch(getProducts())
+  // }, [dispatch])
+
+
   return (
     <div className="mb-5">
-        <Sidebard/>
-        <CardQuestion1/>
+        <Question1 />
     </div>
   )
 }
+

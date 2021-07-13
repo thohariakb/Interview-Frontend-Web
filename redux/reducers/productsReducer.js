@@ -2,7 +2,7 @@ import {
     GET_DATA_PRODUCTS_ONE_BEGIN,
     GET_DATA_PRODUCTS_ONE_SUCCESS,
     GET_DATA_PRODUCTS_ONE_FAIL
-} from '../helpers/actionTypes'
+} from '../constants/productConstants';
 
 const initialState = {
     loading: false,
@@ -10,13 +10,9 @@ const initialState = {
     products: []
 }
 
-const productsDataOne = (state = initialState, action) => {
+export const productsReducer = (state = initialState, action) => {
     const { type, payload, error } = action;
     switch(type) {
-        default:
-            return {
-                ...state
-            };
 
         case GET_DATA_PRODUCTS_ONE_BEGIN:
             return {
@@ -37,7 +33,10 @@ const productsDataOne = (state = initialState, action) => {
                 error: error,
                 products: []
             }
+
+        default:
+            return {
+                ...state
+             };
     }
 }
-
-export default productsDataOne;

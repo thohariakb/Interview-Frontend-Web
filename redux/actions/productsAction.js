@@ -3,10 +3,10 @@ import {
     GET_DATA_PRODUCTS_ONE_BEGIN,
     GET_DATA_PRODUCTS_ONE_SUCCESS,
     GET_DATA_PRODUCTS_ONE_FAIL
-} from '../helpers/actionTypes';
+} from '../constants/productConstants';
 
-export const getDataProductsOne = () => dispatch => {
 
+export const getProducts = () => dispatch => {
 
     dispatch({
         type: GET_DATA_PRODUCTS_ONE_BEGIN,

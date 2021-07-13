@@ -3,9 +3,9 @@ import Sidebard from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import CardQuestion1 from '../components/CardQuestion2';
 
-const question = () => {
+const Question2 = () => {
     return (
-        <>
+
         <div className="auto-cols-auto">
             <div><Sidebard/></div>
             <div>
@@ -13,8 +13,7 @@ const question = () => {
                 <CardQuestion1/>
             </div>
         </div>
-        </>
     )
 }
 
-export default question
+export default Question2

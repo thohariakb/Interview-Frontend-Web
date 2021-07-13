@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 const CardQuestion1 = (props) => {
   const { products } = props;
 
-  console.log("pro", products);
+  //   console.log("pro", products);
 
   return (
     <div>
@@ -28,43 +28,39 @@ const CardQuestion1 = (props) => {
           </p>
         </div>
 
-        {
-            products.map((item, i) => {
-                return(       
-                <div key={i} className="grid grid-cols-4 gap-6 flex flex-wrap items-center py-6 border-b border-gray-300 dark:border-gray-200">
-            <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
-              <p className="text-center text-sm text-gray-800 dark:text-gray-100 mb-2 font-normal">
-                {item?.title}
-              </p>
-            </div>
-            <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
-              <p className="text-center text-sm text-gray-800 dark:text-gray-100 mb-2 font-normal">
-                {item?.id}
-              </p>
-            </div>
-            <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
-              <p className="text-justify text-sm text-gray-800 dark:text-gray-100 mb-2 font-normal">
-                {(item?.description)}
-              </p>
-            </div>
-            <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
-              <div className="ml-20 text-sm text-gray-400 dark:text-gray-100 mb-2 font-normal">
-                <ul className="list-disc">
-                {
-                    (item?.tags?.map(element => 
-                        (<li>{element}</li>)
-                    ))
-              
-                }
-                 
-                </ul>
+        {products.map((item, i) => {
+          return (
+            <div
+              key={i}
+              className="grid grid-cols-4 gap-6 flex flex-wrap items-center py-6 border-b border-gray-300 dark:border-gray-200"
+            >
+              <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
+                <p className="text-center text-sm text-gray-800 dark:text-gray-100 mb-2 font-normal">
+                  {item?.title}
+                </p>
+              </div>
+              <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
+                <p className="text-center text-sm text-gray-800 dark:text-gray-100 mb-2 font-normal">
+                  {item?.id}
+                </p>
+              </div>
+              <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
+                <p className="text-justify text-sm text-gray-800 dark:text-gray-100 mb-2 font-normal">
+                  {item?.description}
+                </p>
+              </div>
+              <div className="mb-4 xl:mb-0 lg:mb-0 md:mb-0">
+                <div className="ml-20 text-sm text-gray-400 dark:text-gray-100 mb-2 font-normal">
+                  <ul className="list-disc">
+                    {item?.tags?.map((element) => (
+                      <li>{element}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>);
-
-            })
-          
-        }
+          );
+        })}
       </div>
     </div>
   );

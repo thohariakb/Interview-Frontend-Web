@@ -8,19 +8,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../redux/actions/productsAction";
 
 const Question1 = () => {
+  const dispatch = useDispatch();
 
-   const dispatch = useDispatch()
-    
   // const dispatch = useDispatch()
   const products = useSelector((state) => state.products.products);
 
-  console.log(products)
+  // console.log(products);
 
   useEffect(() => {
-    dispatch(getProducts())
+    dispatch(getProducts());
     // console.log('call useEffect')
-  }, [dispatch])
-
+  }, [dispatch]);
 
   return (
     <div className="auto-cols-auto">
@@ -28,7 +26,7 @@ const Question1 = () => {
         <Sidebard />
       </div>
       <div>
-        <CardQuestion1 products={products}/>
+        <CardQuestion1 products={products} />
       </div>
     </div>
   );
